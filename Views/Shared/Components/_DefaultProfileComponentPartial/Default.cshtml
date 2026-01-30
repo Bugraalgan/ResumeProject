@@ -1,0 +1,21 @@
+﻿@model List<ResumeProjectDemoNight.Entities.Profile>
+
+@foreach (var item in Model)
+{
+    <div class="col-md-12 text-center">
+
+        <img src="@item.ImageUrl"
+             alt="@item.FullName"
+             width="250"
+             height="250"
+             class="rounded-circle mx-auto d-block" />
+
+        <h1 class="mb-1 mt-1">@item.FullName</h1>
+
+        <span>
+            Ben'
+            <span class="text-rotating">@item.Title</span>
+        </span>
+
+    </div>
+}

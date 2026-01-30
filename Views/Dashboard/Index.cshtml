@@ -1,0 +1,100 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="p-8 space-y-10">
+
+    <!-- HIZLI BAKIŞ -->
+    <div class="bg-gradient-to-r from-primary/20 to-cyan-500/10 rounded-2xl p-8 shadow-lg border border-primary/20">
+        <h1 class="text-2xl font-bold text-white mb-2">
+            👋 Hoş geldin, Admin
+        </h1>
+        <p class="text-slate-300 max-w-3xl">
+            Burası yönetim panelin. Buradan projelerini, mesajlarını ve içeriklerini
+            hızlıca yönetebilir, istatistiklere tek bakışta ulaşabilirsin.
+        </p>
+    </div>
+
+    <!-- İSTATİSTİK KARTLARI -->
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+
+        <!-- Toplam Proje -->
+        <div class="bg-card-dark rounded-2xl p-6 shadow-lg border border-slate-800 hover:border-primary/50 transition">
+            <div class="flex items-center justify-between">
+                <p class="text-slate-400 text-sm">Toplam Proje</p>
+                <span class="material-symbols-outlined text-primary">layers</span>
+            </div>
+            <h3 class="text-4xl font-extrabold text-white mt-4">12</h3>
+            <p class="text-xs text-slate-500 mt-1">Yayında olan projeler</p>
+        </div>
+
+        <!-- Toplam Mesaj -->
+        <div class="bg-card-dark rounded-2xl p-6 shadow-lg border border-slate-800 hover:border-cyan-400/50 transition">
+            <div class="flex items-center justify-between">
+                <p class="text-slate-400 text-sm">Toplam Mesaj</p>
+                <span class="material-symbols-outlined text-cyan-400">mail</span>
+            </div>
+            <h3 class="text-4xl font-extrabold text-white mt-4">48</h3>
+            <p class="text-xs text-slate-500 mt-1">Tüm zamanlar</p>
+        </div>
+
+        <!-- Okunmamış Mesaj -->
+        <div class="bg-card-dark rounded-2xl p-6 shadow-lg border border-slate-800 hover:border-red-400/50 transition">
+            <div class="flex items-center justify-between">
+                <p class="text-slate-400 text-sm">Okunmamış</p>
+                <span class="material-symbols-outlined text-red-400">notifications</span>
+            </div>
+            <h3 class="text-4xl font-extrabold text-white mt-4">7</h3>
+            <p class="text-xs text-red-400 mt-1">Dikkat gerektiriyor</p>
+        </div>
+
+        <!-- Yetenek -->
+        <div class="bg-card-dark rounded-2xl p-6 shadow-lg border border-slate-800 hover:border-emerald-400/50 transition">
+            <div class="flex items-center justify-between">
+                <p class="text-slate-400 text-sm">Toplam Yetenek</p>
+                <span class="material-symbols-outlined text-emerald-400">code</span>
+            </div>
+            <h3 class="text-4xl font-extrabold text-white mt-4">15</h3>
+            <p class="text-xs text-slate-500 mt-1">Aktif kullanılan</p>
+        </div>
+
+    </div>
+
+    <!-- HAKKIMDA / ÖZET -->
+    <div class="grid grid-cols-1 xl:grid-cols-3 gap-6">
+
+        <!-- Summary -->
+        <div class="xl:col-span-2 bg-card-dark rounded-2xl p-8 shadow-lg border border-slate-800">
+            <h2 class="text-xl font-bold text-white mb-4">
+                🧠 Hakkımda (Özet)
+            </h2>
+            <p class="text-slate-300 leading-relaxed">
+                Yazılım geliştirme alanında modern web teknolojileri ile projeler üreten,
+                backend ve frontend tarafında kendini geliştiren bir yazılım geliştiricisiyim.
+                ASP.NET Core, Entity Framework ve modern arayüz kütüphaneleri ile
+                sürdürülebilir ve ölçeklenebilir uygulamalar geliştirmeyi hedefliyorum.
+            </p>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="bg-card-dark rounded-2xl p-6 shadow-lg border border-slate-800">
+            <h3 class="text-lg font-bold text-white mb-4">
+                ⚡ Hızlı İşlemler
+            </h3>
+            <div class="space-y-3">
+                <a href="/Portfolio/CreatePortfolio" class="block bg-primary/20 hover:bg-primary/30 text-primary font-medium px-4 py-2 rounded-lg transition">
+                    ➕ Yeni Proje Ekle
+                </a>
+                <a href="/Message/MessageList" class="block bg-cyan-500/20 hover:bg-cyan-500/30 text-cyan-400 font-medium px-4 py-2 rounded-lg transition">
+                    📩 Mesajları Gör
+                </a>
+                <a href="/About/UpdateAbout" class="block bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-400 font-medium px-4 py-2 rounded-lg transition">
+                    ✏️ Hakkımda Güncelle
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+</div>

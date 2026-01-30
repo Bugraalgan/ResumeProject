@@ -1,0 +1,102 @@
+﻿@model List<ResumeProjectDemoNight.Entities.About>
+
+<section id="about">
+
+	<div class="container">
+		@foreach(var item in Model){
+		<!-- section title -->
+		<h2 class="section-title wow fadeInUp">Hakkımda</h2>
+
+		<div class="spacer" data-height="60"></div>
+
+		<div class="row">
+			
+			<div class="col-md-3">
+				<div class="text-center text-md-left">
+					<!-- avatar image -->
+					<img src="@item.ImageUrl" alt="Bolby" />
+				</div>
+				<div class="spacer d-md-none d-lg-none" data-height="30"></div>
+			</div>
+
+			<div class="col-md-9 triangle-left-md triangle-top-sm">
+				<div class="rounded bg-white shadow-dark padding-30">
+					<div class="row">
+						<div class="col-md-6">
+							<!-- about text --> 
+							<p>@item.Description</p>
+								<div class="mt-3">
+									<a href="/Bugra_Algan_CV.pdf"
+									   class="btn btn-default"
+									   download>
+										CV İndir
+									</a>
+								</div>
+
+							<div class="spacer d-md-none d-lg-none" data-height="30"></div>
+							</div>
+							@await Component.InvokeAsync("_DefaultSkillComponentPartial")
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!-- row end -->
+
+		<div class="spacer" data-height="70"></div>
+
+		<div class="row">
+
+			<div class="col-md-3 col-sm-6">
+				<!-- fact item -->
+				<div class="fact-item">
+					<span class="icon icon-fire"></span>
+					<div class="details">
+							<h3 class="mb-0 mt-0 number"><em class="count">@ViewBag.ReferenceCount </em></h3>
+						<p class="mb-0">Referans Sayısı</p>
+					</div>
+				</div>
+				<div class="spacer d-md-none d-lg-none" data-height="30"></div>
+			</div>
+
+			<div class="col-md-3 col-sm-6">
+				<!-- fact item -->
+				<div class="fact-item">
+					<span class="icon icon-cup"></span>
+					<div class="details">
+							<h3 class="mb-0 mt-0 number"><em class="count">@ViewBag.CompletedProjectCount</em></h3>
+						<p class="mb-0">Tamamlanan Proje Sayısı</p>
+					</div>
+				</div>
+				<div class="spacer d-md-none d-lg-none" data-height="30"></div>
+			</div>
+
+			<div class="col-md-3 col-sm-6">
+				<!-- fact item -->
+				<div class="fact-item">
+					<span class="icon icon-people"></span>
+					<div class="details">
+							<h3 class="mb-0 mt-0 number"><em class="count">@ViewBag.ExperienceYear </em></h3>
+							<p class="mb-0">Toplam Deneyim (Yıl)</p>
+					</div>
+				</div>
+				<div class="spacer d-md-none d-lg-none" data-height="30"></div>
+			</div>
+
+			<div class="col-md-3 col-sm-6">
+				<!-- fact item -->
+				<div class="fact-item">
+					<span class="icon icon-badge"></span>
+					<div class="details">
+							<h3 class="mb-0 mt-0 number"><em class="count">@ViewBag.TechnologyCount</em></h3>
+							<p class="mb-0">Kullanılan Teknoloji / Dil Sayısı</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		}
+	</div>
+
+</section>
